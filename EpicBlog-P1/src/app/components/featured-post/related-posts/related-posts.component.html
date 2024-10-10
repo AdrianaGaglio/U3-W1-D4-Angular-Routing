@@ -1,0 +1,25 @@
+<div *ngIf="relatedPosts.length > 0">
+  <h5 class="mb-3">Potrebbero piacerti questi post</h5>
+  <div class="row row-cols-4 g-2">
+    <div class="col" *ngFor="let post of relatedPosts">
+      <div class="card h-100 p-2 shadow-sm">
+        <h6>{{ post.title }}</h6>
+        <div class="mt-auto mb-3">
+          <span
+            class="mx-1 p-1 badge text-bg-warning fs-7 fw-normal"
+            *ngFor="let tag of post.tags"
+            >{{ tag }}</span
+          >
+        </div>
+        <div class="text-center">
+          <button
+            [routerLink]="['/post-detail', post.id]"
+            class="btn btn-danger p-1"
+          >
+            Leggi post
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+$font-sizes: (
+  7: 0.8rem,
+);
+
+@each $value, $size in $font-sizes {
+  .fs-#{$value} {
+    font-size: $size;
+  }
+}
+
+@import "../node_modules/bootstrap/dist/css/bootstrap";

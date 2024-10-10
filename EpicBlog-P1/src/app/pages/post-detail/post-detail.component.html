@@ -1,0 +1,9 @@
+<div *ngIf="post" class="container">
+  <h1>{{ post.title }}</h1>
+  <p>{{ post.body }}</p>
+  <div>
+    <span class="badge text-bg-info mx-1" *ngFor="let tag of post.tags">{{
+      tag
+    }}</span>
+  </div>
+</div>
